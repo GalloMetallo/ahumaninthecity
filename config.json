@@ -4,12 +4,16 @@
         "home_content": "david's website",
         "menu": [
             {
+                "title": "Home",
+                "pages": ["index"]
+            },
+            {
                 "title": "Street",
-                "pages": "Street"
+                "pages": ["Street"]
             },
             {
                 "title": "Black&White",
-                "pages": "Black&White"
+                "pages": ["Black&White"]
             },
             {
                 "title": "Kaktus",
@@ -40,6 +44,16 @@
                     "img/street_2.jpg",
                     "img/street_3.jpg",
                     "img/street_4.jpg"
+                ]
+            },
+            {
+                "title": "Building",
+                "content": "about the Building page",
+                "images": [
+                    "img/building_1.jpg",
+                    "img/building_2.jpg",
+                    "img/building_3.jpg",
+                    "img/building_4.jpg"
                 ]
             },
             {
