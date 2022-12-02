@@ -1,7 +1,7 @@
     {
         "title": "a human in the city",
         "instagram": "https://insta.link",
-        "home_content":"david's website",
+        "home_content": "david's website",
         "menu": [
             {
                 "title": "Street",
@@ -31,10 +31,7 @@
             {
                 "title": "About",
                 "content": "write me on instagram, bye! "
-                
-            }
-        ],
-        "galleries": [
+            },
             {
                 "title": "Street",
                 "content": "about the Street page",
