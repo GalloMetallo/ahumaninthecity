@@ -1,0 +1,75 @@
+    {
+        "title": "a human in the city",
+        "instagram": "https://insta.link",
+        "home_content":"david's website",
+        "menu": [
+            {
+                "title": "Street",
+                "pages": "Street"
+            },
+            {
+                "title": "Black&White",
+                "pages": "Black&White"
+            },
+            {
+                "title": "Kaktus",
+                "pages": [
+                    "Building",
+                    "People"
+                ]
+            }
+        ],
+        "pages": [
+            {
+                "title": "People",
+                "content": "about the People page",
+                "galleries": [
+                    "Ana",
+                    "Ruta"
+                ]
+            },
+            {
+                "title": "About",
+                "content": "write me on instagram, bye! "
+                
+            }
+        ],
+        "galleries": [
+            {
+                "title": "Street",
+                "content": "about the Street page",
+                "images": [
+                    "img/street_1.jpg",
+                    "img/street_2.jpg",
+                    "img/street_3.jpg",
+                    "img/street_4.jpg"
+                ]
+            },
+            {
+                "title": "Black&White",
+                "content": "about the B&W page",
+                "images": [
+                    "img/b&w_1.jpg",
+                    "img/b&w_2.jpg",
+                    "img/b&w_3.jpg",
+                    "img/b&w_4.jpg"
+                ]
+            },
+            {
+                "title": "Ana",
+                "content": "about Ana's page",
+                "images": [
+                    "img/ana_1.jpg",
+                    "img/ana_2.jpg"
+                ]
+            },
+            {
+                "title": "Ruta",
+                "content": "about Ruta's page",
+                "images": [
+                    "img/ruta_1.jpg",
+                    "img/ruta_2.jpg"
+                ]
+            }
+        ]
+    }
