@@ -1,12 +1,13 @@
 body {
-    background-color: blueviolet;
+    background-color: whitesmoke;
     font-family: "Roboto Condensed";
-    color:whitesmoke;
+    color: blueviolet;
 }
 
 ul.menu {
-    padding:0;
+    padding: 0;
 }
+
 ul.menu ul {
     display: none;
     position: absolute;
@@ -14,25 +15,51 @@ ul.menu ul {
     padding: 0;
     list-style: none;
 }
+
 ul.menu li a {
     text-decoration: none;
-    color:white;
+    color: blueviolet;
 }
-ul.menu  > li {
+
+ul.menu>li {
     display: inline-block;
     margin-right: .5rem;
     text-decoration: underline;
 }
+
 .submenu ul li {
     margin-top: 0.4rem;
 }
-.gallery{
-    display: grid;
-    grid-template-columns: 33.333% 33.333% 33.333%;
-}
-.gallery img {
-    display: block;
-    max-width: 100%;
-    height: auto;
 
+.gallery {
+    /* display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%; */
+}
+
+.gallery img {
+    /* display: block;
+    max-width: 100%;
+    height: auto; */
+
+}
+
+
+
+.grid-item img {
+    width: 300px;
+}
+
+.grid {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.grid-sizer,
+.grid-item {
+    /* width: 40%; */
+    margin-bottom: 10px;
+    display: block;
+    /* float: left; */
+    padding: 7px;
+    /* width:50%; */
 }

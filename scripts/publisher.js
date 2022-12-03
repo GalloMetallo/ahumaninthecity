@@ -52,10 +52,17 @@ function page_writer(page, menu) {
     // add images
     if(page.images!=null){
         // console.log(page.title+' has images')
-        $('body').append("<div class='gallery'></div>")
+        $('body').append(`
+        <div class='gallery grid' data-masonry='{   "itemSelector": ".grid-item",  "fitWidth": true,  "transitionDuration": "0.8s", "columnWidth": 80,  "gutter": 10 }'>
+       
+        </div>`)
+
+        //add masonry library
+        $('head').append('<script defer="" src="js/masonry.js" type="text/javascript"></script>')
+
 
         page.images.forEach((img)=>{
-            $('.gallery').append("<img src='./"+img+"'>")
+            $('.gallery').append("<div class='grid-item'><img src='./"+img+"'></div>")
 
         })
     }
