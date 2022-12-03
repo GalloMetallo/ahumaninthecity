@@ -26,3 +26,13 @@ ul.menu  > li {
 .submenu ul li {
     margin-top: 0.4rem;
 }
+.gallery{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+}
+.gallery img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+}
