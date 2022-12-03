@@ -34,3 +34,11 @@ function submenu_close(el) {
     console.log("submenu_style", submenu_style)
     el.querySelector('ul').style.display =  "none";
 }
+
+
+window.onload = function(event) {
+    var msnry = new Masonry( '.grid', {
+        columnWidth: 40,
+        itemSelector: '.grid-item'
+      });    
+};
