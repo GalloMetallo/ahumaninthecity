@@ -14,6 +14,7 @@ ul.menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    background-color: whitesmoke;
 }
 
 ul.menu li a {
@@ -83,4 +84,15 @@ ul.menu>li {
 }
 .galleries h2 {
     font-size: 18px;
+}
+
+.instagram img {
+    width: 25px;
+}
+
+.footer .line {
+    display: flex;
+}
+.pagetitle {
+    flex-grow:1;
 }

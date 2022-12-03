@@ -27,6 +27,10 @@ function page_writer(page, menu) {
     $('.top').append("<ul class='menu'></ul>")
     $('.content').append("<h1>" + page.title + "</h1>")
     $('.content').append("<p>" + page.content + "</p>")
+    //check homepage
+    if(page.filename=='index.html'){
+        $('.content').append("<img src='"+config.home_image+"'>")
+    }
     //append menu
     // console.log(menu)
     menu.forEach((m) => {
@@ -86,6 +90,9 @@ function page_writer(page, menu) {
 
         })
     }
+    // compose footer
+    $('.footer').prepend("<div class='line'><div class='pagetitle'>"+config.title+"</div><div  class='instagram'><a href='"+config.instagram+"'><img src='icon/instagram.svg'></a></div></div>")
+
     //save file
     let pagename = (page.filename) ? page.filename : page_filename(page.title);
 
