@@ -46,8 +46,21 @@ ul.menu>li {
 
 
 .grid-item img {
-    width: 300px;
+    /* width: 250px; */
+    width: 40vw;
+    border-radius: 3px;
 }
+ @media screen and (max-width: 600px) {
+    .grid-item img {
+        width: 35vw;
+    }
+}
+/*
+@media screen and (min-width: 1500px) {
+    .grid-item img {
+        width: 600px;
+    }
+} */
 
 .grid {
     margin: 0 auto;
@@ -62,4 +75,11 @@ ul.menu>li {
     /* float: left; */
     padding: 7px;
     /* width:50%; */
+}
+
+.galleries img {
+    max-width: 100%;
+}
+.galleries h2 {
+    font-size: 18px;
 }

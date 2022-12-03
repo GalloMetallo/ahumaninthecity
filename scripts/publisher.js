@@ -52,10 +52,11 @@ function page_writer(page, menu) {
     // add images
     if(page.images!=null){
         // console.log(page.title+' has images')
-        $('body').append(`
-        <div class='gallery grid' data-masonry='{   "itemSelector": ".grid-item",  "fitWidth": true,  "transitionDuration": "0.8s", "columnWidth": 80,  "gutter": 10 }'>
+        // $('body').append(`
+        // <div class='gallery grid' data-masonry='{   "itemSelector": ".grid-item",  "fitWidth": true,  "transitionDuration": "0.8s", "columnWidth": 100,  "gutter": 10 }'>
        
-        </div>`)
+        // </div>`)
+        $('body').append(`<div class='gallery grid'></div>`)
 
         //add masonry library
         $('head').append('<script defer="" src="js/masonry.js" type="text/javascript"></script>')
