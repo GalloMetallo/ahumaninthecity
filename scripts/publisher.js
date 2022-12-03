@@ -24,9 +24,9 @@ function page_writer(page, menu) {
     //load into parser
     const $ = cheerio.load(template);
     $('title').html(page.title)
-    $('body').append("<ul class='menu'></ul>")
-    $('body').append("<h1>" + page.title + "</h1>")
-    $('body').append("<p>" + page.content + "</p>")
+    $('.top').append("<ul class='menu'></ul>")
+    $('.content').append("<h1>" + page.title + "</h1>")
+    $('.content').append("<p>" + page.content + "</p>")
     //append menu
     // console.log(menu)
     menu.forEach((m) => {
@@ -56,7 +56,7 @@ function page_writer(page, menu) {
         // <div class='gallery grid' data-masonry='{   "itemSelector": ".grid-item",  "fitWidth": true,  "transitionDuration": "0.8s", "columnWidth": 100,  "gutter": 10 }'>
        
         // </div>`)
-        $('body').append(`<div class='gallery grid'></div>`)
+        $('.content').append(`<div class='gallery grid'></div>`)
 
         //add masonry library
         $('head').append('<script defer="" src="js/masonry.js" type="text/javascript"></script>')
@@ -70,7 +70,7 @@ function page_writer(page, menu) {
     //add galleries
     if(page.galleries!=null){
         console.log(page.title+' has gallery')
-        $('body').append("<div class='galleries'></div>")
+        $('.content').append("<div class='galleries'></div>")
 
         page.galleries.forEach((gallery)=>{
             //check witch page is part of this gallery
