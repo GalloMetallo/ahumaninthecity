@@ -13,7 +13,7 @@ page_writer({ title: config.title, content: config.home_content, filename: 'inde
 
 //generate pages
 config.pages.forEach((page) => {
-    console.log(page)
+    // console.log(page)
     page_writer(page, config.menu)
 })
 
@@ -28,7 +28,7 @@ function page_writer(page, menu) {
     $('body').append("<h1>" + page.title + "</h1>")
     $('body').append("<p>" + page.content + "</p>")
     //append menu
-    console.log(menu)
+    // console.log(menu)
     menu.forEach((m) => {
         if (m.pages.length == 1)
             $(".menu").append("<li><a href='" + page_filename(m.pages[0]) + "'>" + m.title + "</a></p>")
@@ -38,10 +38,9 @@ function page_writer(page, menu) {
             submenu += "<ul>";
             m.pages.forEach((sm) => {
                 config.pages.forEach((page) => {
-                    console.log('submenu',page,sm)
+                    // console.log('submenu',page,sm)
                     if (sm == page.title) {
                         submenu += "<li><a href='"+page_filename (page.title)+"'>"+page.title+"</a></li>";
-
                     }
                 })
             })
@@ -50,6 +49,35 @@ function page_writer(page, menu) {
 
         }
     })
+    // add images
+    if(page.images!=null){
+        // console.log(page.title+' has images')
+        $('body').append("<div class='gallery'></div>")
+
+        page.images.forEach((img)=>{
+            $('.gallery').append("<img src='./"+img+"'>")
+
+        })
+    }
+    //add galleries
+    if(page.galleries!=null){
+        console.log(page.title+' has gallery')
+        $('body').append("<div class='galleries'></div>")
+
+        page.galleries.forEach((gallery)=>{
+            //check witch page is part of this gallery
+            config.pages.forEach((page)=>{
+                console.log(gallery,' ',page.title)
+                if(gallery==page.title){
+                    let tot_images = page.images.length;
+                    let first_image = page.images[0];
+                    $('.galleries').append("<div><h2>"+gallery+" - images "+tot_images+"</h2><a href='"+page_filename( page.title)+"'><img src='./"+first_image+"'></a></div>")
+
+                }
+            })
+
+        })
+    }
     //save file
     let pagename = (page.filename) ? page.filename : page_filename(page.title);
 
