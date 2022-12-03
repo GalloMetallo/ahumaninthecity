@@ -60,10 +60,18 @@
                 "title": "Black&White",
                 "content": "about the B&W page",
                 "images": [
-                    "img/b&w_1.jpg",
-                    "img/b&w_2.jpg",
-                    "img/b&w_3.jpg",
-                    "img/b&w_4.jpg"
+                    "img/bw_01.jpg",
+                    "img/bw_02.jpg",
+                    "img/bw_03.jpg",
+                    "img/bw_04.jpg",
+		    "img/bw_05.jpg",
+		    "img/bw_06.jpg",
+                    "img/bw_07.jpg",
+                    "img/bw_08.jpg",
+                    "img/bw_09.jpg",
+                    "img/bw_10.jpg",
+		    "img/bw_11.jpg",
+                    "img/bw_12.jpg"
                 ]
             },
             {
