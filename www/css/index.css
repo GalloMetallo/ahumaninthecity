@@ -3,3 +3,26 @@ body {
     font-family: "Roboto Condensed";
     color:whitesmoke;
 }
+
+ul.menu {
+    padding:0;
+}
+ul.menu ul {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.menu li a {
+    text-decoration: none;
+    color:white;
+}
+ul.menu  > li {
+    display: inline-block;
+    margin-right: .5rem;
+    text-decoration: underline;
+}
+.submenu ul li {
+    margin-top: 0.4rem;
+}

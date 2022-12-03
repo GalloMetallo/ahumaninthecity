@@ -33,7 +33,9 @@ function page_writer(page, menu) {
         if (m.pages.length == 1)
             $(".menu").append("<li><a href='" + page_filename(m.pages[0]) + "'>" + m.title + "</a></p>")
         else {
-            let submenu = '<li><ul>';
+            let submenu = "<li class='submenu'>";
+            submenu += m.title;
+            submenu += "<ul>";
             m.pages.forEach((sm) => {
                 config.pages.forEach((page) => {
                     console.log('submenu',page,sm)
