@@ -39,6 +39,8 @@ function submenu_close(el) {
 window.onload = function(event) {
     var msnry = new Masonry( '.grid', {
         columnWidth: 40,
-        itemSelector: '.grid-item'
+        itemSelector: '.grid-item',
+        "isFitWidth": true,
+        "gutter": 10
       });    
 };
