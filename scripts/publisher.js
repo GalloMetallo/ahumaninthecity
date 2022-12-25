@@ -19,6 +19,10 @@ config.pages.forEach((page) => {
 
 
 function page_writer(page, menu) {
+    // if(page.filename==undefined){
+        page.filename = (page.filename) ? page.filename : page_filename(page.title);
+
+    // }
     //load template
     const template = fs.readFileSync("../templates/page.html");
     //load into parser
@@ -30,21 +34,24 @@ function page_writer(page, menu) {
     //check homepage
     if(page.filename=='index.html'){
         $('.content').append("<img src='"+config.home_image+"'>")
+        $('body').addClass('home_page')
+
     }
     //append menu
-    // console.log(menu)
     menu.forEach((m) => {
-        if (m.pages.length == 1)
-            $(".menu").append("<li><a href='" + page_filename(m.pages[0]) + "'>" + m.title + "</a></p>")
-        else {
+        if (m.pages.length == 1){
+            let classname=(page_filename (m.pages[0])==page.filename)?' class="selected"':''; 
+
+            $(".menu").append("<li><a href='" + page_filename(m.pages[0]) + "' "+classname+">" + m.title + "</a></p>")
+     } else {
             let submenu = "<li class='submenu'>";
             submenu += m.title;
             submenu += "<ul>";
             m.pages.forEach((sm) => {
-                config.pages.forEach((page) => {
+                config.pages.forEach((p) => {
                     // console.log('submenu',page,sm)
-                    if (sm == page.title) {
-                        submenu += "<li><a href='"+page_filename (page.title)+"'>"+page.title+"</a></li>";
+                    if (sm == p.title) {
+                        submenu += "<li><a href='"+page_filename (p.title)+"'>"+p.title+"</a></li>";
                     }
                 })
             })
@@ -94,9 +101,8 @@ function page_writer(page, menu) {
     $('.footer').prepend("<div class='line'><div class='pagetitle'>"+config.title+"</div><div  class='instagram'><a href='"+config.instagram+"'><img src='icon/instagram.svg'></a></div></div>")
 
     //save file
-    let pagename = (page.filename) ? page.filename : page_filename(page.title);
 
-    fs.writeFileSync('../www/' + pagename, $.html());
+    fs.writeFileSync('../www/' + page.filename, $.html());
 }
 
 function page_filename(name) {

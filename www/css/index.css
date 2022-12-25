@@ -3,11 +3,25 @@ body {
     font-family: "Roboto Condensed";
     color: blueviolet;
 }
+body.home_page {
+    color: white;
+}
+.home_page .content {
+    min-height: 100vh;
+}
 
 ul.menu {
     padding: 0;
 }
 
+ul.menu a {
+    text-decoration: none;
+}
+.home_page ul.menu a,.home_page ul.menu {
+    color: white;
+    text-decoration: none;
+
+}
 ul.menu ul {
     display: none;
     position: absolute;
@@ -18,14 +32,20 @@ ul.menu ul {
 }
 
 ul.menu li a {
-    text-decoration: none;
     color: blueviolet;
+}
+ul.menu li a.selected {
+    /* text-decoration: underline; */
+    border-bottom: 1px solid;
+    margin-bottom: 4px;
 }
 
 ul.menu>li {
     display: inline-block;
     margin-right: .5rem;
-    text-decoration: underline;
+    font-size: larger;
+    font-weight: 500;
+    /* text-decoration: underline; */
 }
 
 .submenu ul li {
@@ -95,4 +115,12 @@ ul.menu>li {
 }
 .pagetitle {
     flex-grow:1;
+}
+
+.home_page .content img {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    max-height: -webkit-fill-available;
+    left: 0;
 }
