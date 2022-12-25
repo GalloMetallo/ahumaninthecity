@@ -1,7 +1,7 @@
 body {
     background-color: whitesmoke;
     font-family: "Roboto Condensed";
-    color: blueviolet;
+    color: black;
 }
 body.home_page {
     color: white;
@@ -9,10 +9,22 @@ body.home_page {
 .home_page .content {
     min-height: 100vh;
 }
+.home_page h1{
+    display: none;
+}
 
+.top{
+    padding-top: 1rem;
+     background: linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(255,255,255,.1) 35%, rgba(255,212,255,.1) 100%);
+
+}
 ul.menu {
     padding: 0;
+    margin-top: 2rem;
+    margin-left:2rem;
+
 }
+
 
 ul.menu a {
     text-decoration: none;
@@ -32,7 +44,7 @@ ul.menu ul {
 }
 
 ul.menu li a {
-    color: blueviolet;
+    color: black;
 }
 ul.menu li a.selected {
     /* text-decoration: underline; */
@@ -43,9 +55,11 @@ ul.menu li a.selected {
 ul.menu>li {
     display: inline-block;
     margin-right: .5rem;
+    padding-right: .5rem;
     font-size: larger;
-    font-weight: 500;
+    /* font-weight: 500; */
     /* text-decoration: underline; */
+    letter-spacing: .15em;
 }
 
 .submenu ul li {
