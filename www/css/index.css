@@ -121,6 +121,8 @@ ul.menu>li {
     position: fixed;
     top: 0;
     z-index: -1;
-    max-height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    object-fit: cover;
     left: 0;
 }
